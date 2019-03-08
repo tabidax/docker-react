@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t tabidax/docker-react -f Dockerfile.dev .
+    - docker build -t tabidax/docker-react_ci -f Dockerfile.dev .
 
 script:
-    - docker run tabidax/docker-react npm run test -- --coverage
+    - docker run tabidax/docker-react_ci npm run test -- --coverage
