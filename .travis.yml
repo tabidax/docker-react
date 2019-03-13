@@ -5,14 +5,15 @@ services:
 before_install:
     - docker build -t tabidax/docker-react -f Dockerfile .
 
-#script:
-#    - docker run tabidax/docker-react npm run test -- --coverage
+script:
+    - docker run hello-world
 
 deploy:
     provider: script
     script: bash docker_push
     on:
         branch: master
+
 #    provider: elasticbeanstalk
 #    region: "us-east-2"
 #    app: "docker-react_ci"
