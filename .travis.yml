@@ -8,15 +8,15 @@ before_install:
 script:
     - docker run tabidax/docker-react_ci npm run test -- --coverage
 
-deploy:
-    provider: elasticbeanstalk
-    region: "us-east-2"
-    app: "docker-react_ci"
-    env: "DockerReactCi-env"
-    bucket_name: "elasticbeanstalk-us-east-2-868400164148"
-    bucket_path: "docker-react_ci"
-    on:
-        branch: master
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key:
-        secure: "$AWS_SECRET_KEY"
+#deploy:
+#    provider: elasticbeanstalk
+#    region: "us-east-2"
+#    app: "docker-react_ci"
+#    env: "DockerReactCi-env"
+#    bucket_name: "elasticbeanstalk-us-east-2-868400164148"
+#    bucket_path: "docker-react_ci"
+#    on:
+#        branch: master
+#    access_key_id: $AWS_ACCESS_KEY
+#    secret_access_key:
+#        secure: "$AWS_SECRET_KEY"
